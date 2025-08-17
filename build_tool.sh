@@ -48,7 +48,7 @@ clean(){
 build_kernel(){
 	export KBUILD_BUILD_USER="MinecraftVM"  
 	export KBUILD_BUILD_HOST="MinecraftVM-GitHub-Action"  
-	make $args wayne_defconfig #修改配置文件
+	make $args thyme_defconfig LOCALVERSION=-ColorfulKernel-THYME-Android16 #修改配置文件
 	if [ $? -ne 0 ]; then
       		exit 0
         fi
